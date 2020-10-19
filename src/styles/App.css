@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+
+body {
+    background: pink;
+    height: 100vh;
+    background-repeat: no-repeat;
+    white-space: pre-wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding: 30px;
+}
+
+@media screen and (max-width: 38.5em) {
+    form {
+        padding: 10px;
+    }
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
