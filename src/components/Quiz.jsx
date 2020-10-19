@@ -125,7 +125,7 @@ export class Quiz extends Component {
 								</div>
 							);
 						})}
-						<Button variant="contained" color="secondary" onClick={() => window.location.assign('/') }>Go Back</Button>
+						<Button variant="contained" color="secondary" onClick={() => window.location.assign('/quiz') }>Go Back</Button>
 					</form>
 				</>
 			);
