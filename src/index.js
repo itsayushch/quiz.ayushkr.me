@@ -1,24 +1,40 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route , Redirect } from 'react-router-dom';
 
-import { Quiz } from './components/Quiz';
+import ThemeProvider from './theme/Provider';
+import { getStyles } from './theme/theme';
+import { ThemeContext } from './theme/Provider';
+
+import Quiz from './components/Quiz';
 import Lander from './components/Lander';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-class App extends Component {
-    render() {
-        return (
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Lander} />
-                    <Route exact path="/quiz" component={Quiz} />
-                </Switch>
-            </Router>
-        );
-    }
+const App = () => {
+    const { mode } = useContext(ThemeContext);
+    const styles = getStyles(mode);
+    return (
+        <>
+            <div style={{ background: styles.backgroundColor, color: styles.color }}>
+                <Router>
+                <Navbar />
+                    <Switch>
+                        <Route exact path='/' component={Lander} />
+                        <Route exact path='/quiz' component={Quiz} />
+                        <Redirect to='/' />
+                    </Switch>
+                </Router>
+                <Footer />
+            </div>
+        </>
+    );
 }
 
 render(
-    <App />,
-    document.getElementById("root")
+    <ThemeProvider>
+        <App />
+    </ThemeProvider>
+    ,
+    document.getElementById('root')
 );

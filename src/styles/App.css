@@ -1,14 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background: pink;
+    margin: 0;
+}
+
+.bg {
+    margin: 0%;
     height: 100vh;
-    background-repeat: no-repeat;
-    white-space: pre-wrap;
+    padding: 0%;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 form {
@@ -27,6 +42,62 @@ form {
     }
 }
 
-h1 {
-    font-family: 'Josefin Sans', sans-serif;
+h1, .hero h2 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.hero h1 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.hero h4, .form {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.form h4 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.border-3  {
+    border-left-style: solid !important;
+    border-width: 0.35rem !important;
+}
+
+@-webkit-keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+.btn {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: white;
+}
+
+#icon {
+    transition: 0.5s;
+}
+
+#icon:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
