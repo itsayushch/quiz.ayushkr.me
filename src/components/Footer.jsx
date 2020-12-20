@@ -25,8 +25,8 @@ class Footer extends Component {
 				<div className='container-fluid' style={{ fontFamily: `'Varela Round', sans-serif`, margin: 0, background: div.bg.replace(/linear-gradient|[(]|[)]/g, '').split(/, +/g)[0], marginTop: 2, textAlign: 'center', paddingTop: 6, paddingBottom: 6 }}>
 					<span style={{ color }}>&copy; {new Date().getFullYear()}</span> <strong><a href="https://ayushkr.me" target='_blank' rel='noopener noreferrer'>Ayush CH</a></strong><br /><br />
 					<span style={{ color }}>
-						This site is early Alpha stage and is supposed to have lots of bugs, issues and missing features.<br />
-						If you find any bugs or want new features, please feel free to inform me.<br /><br />
+						This site is still in development, it may have some bugs and issues.<br />
+						If you find any bugs, or issues, or want new features, please feel free to inform me.<br /><br />
 						If you want to contribute to the site, you are most welcome.<br />
 						You can contribute to the open source repository which is available on <strong><a href="https://github.com/itsayushch/quiz.ayushkr.me" target='_blank' rel='noopener noreferrer'><span style={{ color: div.color }}> GitHub</span></a></strong>.
         	</span>
